@@ -1,9 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Intranet Liverpool Fem</title>
+
+  <link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.log("Error en SW:", err));
+  }
+</script>
+    
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -232,6 +241,7 @@ left:30px; ">
 
 </body>
 </html>
+
 
 
 
