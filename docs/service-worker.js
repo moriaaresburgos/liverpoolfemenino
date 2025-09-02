@@ -1,7 +1,7 @@
-self.addEventListener('install', event => {
-  console.log('Service Worker instalado');
+self.addEventListener("install", event => {
+  console.log("Service Worker instalado.");
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(fetch(event.request));
+  //Podes cachear archivos si querés, por ahora solo pasa las requests
 });
