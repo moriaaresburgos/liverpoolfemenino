@@ -2,16 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intranet Liverpool Fem</title>
 
+
+  
+  <!-- 🔹 Manifest y colores -->
   <link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(() => console.log("Service Worker registrado"))
-      .catch(err => console.log("Error en SW:", err));
-  }
-</script>
+  <meta name="theme-color" content="#0000ff">
+
+  <!-- 🔹 Icono de la app -->
+  <link rel="icon" href="icono.png" type="image/png">
+</head>
+<body>
+  <h1>🚀 Bienvenido a mi App</h1>
+  <p>Esta web funciona como una aplicación en tu celular.</p>
+
+  <button onclick="alert('Hola desde mi WebApp!')">Probar botón</button>
+  <br><br>
+  <a href="miarchivo.pdf" target="_blank">📄 Abrir PDF</a>
+
+  <!-- 🔹 Script para registrar el Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(reg => console.log("Service Worker registrado:", reg))
+        .catch(err => console.error("Error registrando Service Worker:", err));
+    }
+  </script>
+</body>
+</html>
     
   <style>
     body {
@@ -241,6 +261,7 @@ left:30px; ">
 
 </body>
 </html>
+
 
 
 
