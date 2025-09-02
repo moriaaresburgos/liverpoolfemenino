@@ -1,8 +1,7 @@
-self.addEventListener("install", event => {
-  console.log("Service Worker instalado");
+self.addEventListener('install', event => {
+  console.log('Service Worker instalado');
 });
 
-self.addEventListener("fetch", event => {
-  // Deja que todos los recursos se carguen normalmente
+self.addEventListener('fetch', event => {
   event.respondWith(fetch(event.request));
 });
