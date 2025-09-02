@@ -2,30 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intranet Liverpool Fem</title>
-
+  
+<link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.log("Error en SW:", err));
+  }
+</script>
 
   
-  <!-- 🔹 Manifest y colores -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0000ff">
-
-  <!-- 🔹 Icono de la app -->
-  <link rel="icon" href="icono.png" type="image/png">
-</head>
-<body>
   
-  <!-- 🔹 Script para registrar el Service Worker -->
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js")
-        .then(reg => console.log("Service Worker registrado:", reg))
-        .catch(err => console.error("Error registrando Service Worker:", err));
-    }
-  </script>
-</body>
-</html>
     
   <style>
     body {
@@ -255,6 +244,7 @@ left:30px; ">
 
 </body>
 </html>
+
 
 
 
